@@ -183,7 +183,7 @@ class FirebaseAuthenticationService {
 
         final OAuthCredential facebookAuthCredential =
             FacebookAuthProvider.credential(
-                facebookLoginResult.accessToken!.token);
+                facebookLoginResult.accessToken!.tokenString);
 
         userCredential = await _signInWithCredential(facebookAuthCredential);
       }
